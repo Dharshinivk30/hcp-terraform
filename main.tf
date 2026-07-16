@@ -15,7 +15,7 @@ provider "aws" {
 resource "aws_instance" "my-ec2-vm" {
   ami           = var.ec2-ami
   instance_type = var.ec2-type
-  count = 1
+  count = 3
   tags = {
     "Name" = "HCP-EC2-${count.index}"
   }
